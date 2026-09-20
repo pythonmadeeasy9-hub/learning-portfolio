@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Py | Senior Marketing Executive | Campaigns, Content & Digital Marketing</title>
+<meta name="description" content="Portfolio of Py, a Senior Marketing Executive specializing in campaign management, content marketing, email marketing, social media, marketing strategy, and team mentorship.">
+<meta property="og:title" content="Py | Senior Marketing Executive">
+<meta property="og:description" content="Campaign strategy, content marketing, email, social and team leadership — built to be measured.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A0A0C%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%238B5CF6%22 font-family=%22Georgia%22>P</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#09090b;
+    --bg-alt:#0e0e12;
+    --surface:#111114;
+    --border:#232228;
+    --border-soft:#1a1a1f;
+    --text:#ededf0;
+    --text-muted:#9c9ca6;
+    --text-dim:#67676f;
+    --accent:#8b5cf6;
+    --accent-soft:#a78bfa;
+    --accent-glow:rgba(139,92,246,.35);
+    --accent-dim:#6d28d9;
+    --radius:14px;
+    --maxw:1180px;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:96px;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:600;line-height:1.12;letter-spacing:-0.01em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  section{position:relative;}
+  ::selection{background:var(--accent);color:#0a0a0c;}
+  :focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:4px;}
+
+  /* background texture */
+  .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.35;z-index:0;}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:50;
+    padding-top:env(safe-area-inset-top,0px);
+    background:rgba(9,9,11,.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border-soft);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:8px;}
+  .logo-mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-dim));display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:#fff;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{font-size:.92rem;color:var(--text-muted);transition:color .2s;}
+  .nav-links a:hover{color:var(--text);}
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent);color:#0a0a0c;font-weight:600;
+    padding:10px 20px;border-radius:999px;font-size:.9rem;
+    border:1px solid var(--accent);cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .cta-btn:hover{background:var(--accent-soft);box-shadow:0 0 28px var(--accent-glow);transform:translateY(-1px);}
+  .cta-ghost{
+    display:inline-flex;align-items:center;gap:8px;
+    background:transparent;color:var(--text);font-weight:500;
+    padding:10px 20px;border-radius:999px;font-size:.9rem;
+    border:1px solid var(--border);transition:border-color .2s, background .2s;
+  }
+  .cta-ghost:hover{border-color:var(--accent-soft);background:rgba(139,92,246,.06);}
+  .hamburger{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:6px;}
+  .mobile-menu{display:none;flex-direction:column;gap:2px;padding:8px 32px 20px;border-top:1px solid var(--border-soft);}
+  .mobile-menu a{padding:12px 0;color:var(--text-muted);border-bottom:1px solid var(--border-soft);font-size:.95rem;}
+  .mobile-menu.open{display:flex;}
+
+  /* HERO */
+  .hero{padding:96px 0 80px;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:1;}
+  .eyebrow{font-size:.85rem;color:var(--accent-soft);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);}
+  .hero h1{font-size:clamp(2.2rem,4.6vw,3.6rem);max-width:15ch;}
+  .hero .lede{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--text-muted);margin-top:20px;max-width:44ch;line-height:1.45;}
+  .hero p.intro{margin-top:22px;color:var(--text-muted);max-width:48ch;font-size:1rem;}
+  .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .credibility{margin-top:34px;font-size:.85rem;color:var(--text-dim);letter-spacing:.02em;}
+
+  .hero-visual{position:relative;aspect-ratio:1/1;}
+  .hero-visual svg{width:100%;height:100%;}
+  .node-label{font-family:'Inter',sans-serif;font-size:11px;fill:var(--text-muted);}
+  .node-dot{fill:var(--accent);}
+  .node-line{stroke:var(--border);stroke-width:1;}
+  .node-pulse{animation:pulse 2.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:.5;}50%{opacity:1;}}
+
+  /* fade-in on load only */
+  .load-in{opacity:0;transform:translateY(14px);animation:loadIn .7s cubic-bezier(.2,.8,.2,1) forwards;}
+  .load-in.d1{animation-delay:.05s;}
+  .load-in.d2{animation-delay:.16s;}
+  .load-in.d3{animation-delay:.27s;}
+  .load-in.d4{animation-delay:.38s;}
+  @keyframes loadIn{to{opacity:1;transform:translateY(0);}}
+
+  /* METRICS */
+  .metrics{border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);background:var(--bg-alt);}
+  .metrics-grid{display:grid;grid-template-columns:repeat(5,1fr);}
+  .metric{padding:36px 24px;text-align:left;border-right:1px solid var(--border-soft);}
+  .metric:last-child{border-right:none;}
+  .metric .num{font-family:'Space Grotesk',sans-serif;font-size:2.1rem;font-weight:700;color:var(--accent-soft);}
+  .metric .label{font-size:.82rem;color:var(--text-dim);margin-top:6px;}
+
+  /* SECTION HEADERS */
+  .section{padding:100px 0;}
+  .section.alt{background:var(--bg-alt);}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.7rem,2.8vw,2.35rem);}
+  .section-head p{color:var(--text-muted);margin-top:14px;font-size:1.02rem;max-width:56ch;}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+  .about-grid p{color:var(--text-muted);margin-top:16px;}
+  .about-grid p:first-of-type{margin-top:0;}
+  .steps{display:flex;flex-direction:column;gap:0;}
+  .step{display:flex;gap:20px;padding:20px 0;border-top:1px solid var(--border-soft);}
+  .step:last-child{border-bottom:1px solid var(--border-soft);}
+  .step .idx{font-family:'Space Grotesk',sans-serif;color:var(--accent-soft);font-weight:600;font-size:.95rem;min-width:28px;}
+  .step h4{font-size:1rem;margin-bottom:4px;}
+  .step p{color:var(--text-muted);font-size:.92rem;}
+
+  /* EXPERTISE */
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .exp-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:28px 26px;transition:border-color .25s, transform .25s, box-shadow .25s;
+  }
+  .exp-card:hover{border-color:rgba(139,92,246,.45);transform:translateY(-3px);box-shadow:0 14px 40px -18px var(--accent-glow);}
+  .exp-icon{width:38px;height:38px;border-radius:10px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--accent-soft);}
+  .exp-card h3{font-size:1.08rem;margin-bottom:8px;}
+  .exp-card p.desc{color:var(--text-muted);font-size:.92rem;margin-bottom:14px;}
+  .exp-card ul{display:flex;flex-wrap:wrap;gap:6px;}
+  .exp-card li{font-size:.76rem;color:var(--text-dim);border:1px solid var(--border-soft);padding:4px 9px;border-radius:999px;}
+
+  /* TOOLS */
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 28px;}
+  .tool-cat h4{font-size:.86rem;color:var(--text-dim);margin-bottom:12px;font-weight:500;}
+  .tool-badges{display:flex;flex-wrap:wrap;gap:8px;}
+  .tool-badges span{font-size:.8rem;border:1px solid var(--border);padding:6px 12px;border-radius:8px;color:var(--text-muted);}
+  .tools-note{margin-top:44px;color:var(--text-dim);font-size:.9rem;font-style:italic;border-left:2px solid var(--accent-dim);padding-left:16px;}
+
+  /* WORK */
+  .work-list{display:flex;flex-direction:column;gap:20px;}
+  .work-card{
+    display:grid;grid-template-columns:.9fr 1.6fr;gap:36px;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:34px;transition:border-color .25s, transform .25s;
+  }
+  .work-card:hover{border-color:rgba(139,92,246,.4);}
+  .work-meta{color:var(--text-dim);font-size:.82rem;margin-bottom:10px;}
+  .work-card h3{font-size:1.3rem;margin-bottom:14px;}
+  .work-detail{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;}
+  .work-detail div h5{font-size:.75rem;color:var(--text-dim);font-weight:500;margin-bottom:5px;}
+  .work-detail div p{font-size:.9rem;color:var(--text-muted);}
+  .work-link{margin-top:20px;display:inline-flex;align-items:center;gap:6px;color:var(--accent-soft);font-size:.9rem;font-weight:500;}
+
+  /* PROCESS TIMELINE */
+  .timeline{display:flex;position:relative;overflow-x:auto;gap:0;padding-bottom:6px;}
+  .timeline::before{content:'';position:absolute;top:19px;left:0;right:0;height:1px;background:var(--border);}
+  .tstep{flex:1;min-width:150px;padding-right:24px;position:relative;}
+  .tstep .dot{width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent-soft);margin-bottom:16px;position:relative;z-index:1;}
+  .tstep h4{font-size:.95rem;margin-bottom:6px;}
+  .tstep p{font-size:.82rem;color:var(--text-muted);}
+
+  /* LEADERSHIP */
+  .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:44px;}
+  .lead-card{border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:var(--surface);}
+  .lead-card h4{font-size:1.02rem;margin-bottom:10px;color:var(--accent-soft);}
+  .lead-card p{color:var(--text-muted);font-size:.92rem;}
+  .philosophy-line{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;color:var(--text);border-top:1px solid var(--border-soft);padding-top:28px;max-width:36ch;}
+  .philosophy-line span{color:var(--text-dim);font-size:.85rem;display:block;font-family:'Inter';margin-top:10px;}
+
+  /* EXPERIENCE */
+  .exp-item{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--border-soft);}
+  .exp-item:last-child{border-bottom:1px solid var(--border-soft);}
+  .exp-item .dates{color:var(--text-dim);font-size:.85rem;}
+  .exp-item h3{font-size:1.15rem;margin-bottom:2px;}
+  .exp-item .company{color:var(--accent-soft);font-size:.9rem;margin-bottom:12px;}
+  .exp-item ul{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;}
+  .exp-item li{font-size:.88rem;color:var(--text-muted);padding-left:14px;position:relative;}
+  .exp-item li::before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--accent-soft);}
+
+  /* PHILOSOPHY QUOTES */
+  .quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden;}
+  .quote{background:var(--bg);padding:40px;font-family:'Space Grotesk',sans-serif;font-size:1.3rem;line-height:1.4;}
+
+  /* CONTACT */
+  .contact{text-align:left;}
+  .contact h2{font-size:clamp(2rem,4vw,3rem);max-width:16ch;}
+  .contact p{color:var(--text-muted);max-width:52ch;margin-top:18px;font-size:1.05rem;}
+  .contact-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .contact-details{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap;border-top:1px solid var(--border-soft);padding-top:28px;}
+  .contact-details div h5{font-size:.78rem;color:var(--text-dim);margin-bottom:6px;font-weight:500;}
+  .contact-details div p{color:var(--text-muted);font-size:.95rem;}
+
+  footer{border-top:1px solid var(--border-soft);padding:48px 0;padding-bottom:calc(48px + env(safe-area-inset-bottom,0px));}
+  .footer-grid{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+  .footer-tag{color:var(--text-dim);font-size:.85rem;margin-top:6px;}
+  .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
+  .footer-links a{color:var(--text-muted);font-size:.88rem;}
+  .footer-links a:hover{color:var(--text);}
+  .copyright{color:var(--text-dim);font-size:.8rem;margin-top:28px;}
+
+  @media (max-width:940px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{max-width:420px;margin:0 auto;order:-1;}
+    .metrics-grid{grid-template-columns:repeat(2,1fr);}
+    .metric:nth-child(2n){border-right:none;}
+    .about-grid{grid-template-columns:1fr;gap:36px;}
+    .card-grid{grid-template-columns:repeat(2,1fr);}
+    .tools-grid{grid-template-columns:repeat(2,1fr);}
+    .work-card{grid-template-columns:1fr;}
+    .lead-grid{grid-template-columns:1fr;}
+    .quote-grid{grid-template-columns:1fr;}
+    .exp-item{grid-template-columns:1fr;gap:8px;}
+    .exp-item ul{grid-template-columns:1fr;}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px;}
+    nav{padding:16px 20px;}
+    .nav-links{display:none;}
+    .hamburger{display:block;}
+    .hero{padding:48px 0 56px;}
+    .section{padding:64px 0;}
+    .metrics-grid{grid-template-columns:repeat(2,1fr);}
+    .card-grid{grid-template-columns:1fr;}
+    .tools-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001s !important;transition-duration:.001s !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="logo"><span class="logo-mark">P</span>Py</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact" class="cta-btn">Let's Talk</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow" style="width:520px;height:520px;background:var(--accent);top:-120px;left:-160px;"></div>
+    <div class="glow" style="width:380px;height:380px;background:var(--accent-dim);bottom:-140px;right:-80px;"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow load-in d1">Senior Marketing Executive</div>
+        <h1 class="load-in d2">Marketing strategist &amp; campaign builder</h1>
+        <p class="lede load-in d3">Turning ideas into campaigns, content into conversations, and marketing activity into measurable impact.</p>
+        <p class="intro load-in d3">Hi, I'm Py — I work across campaign strategy, content marketing, email marketing, social media, and team mentoring, combining strategic thinking with hands-on execution to build marketing programs that connect brands with the right audiences.</p>
+        <div class="hero-actions load-in d4">
+          <a href="#work" class="cta-btn">View my work</a>
+          <a href="#contact" class="cta-ghost">Let's connect</a>
+        </div>
+        <div class="credibility load-in d4">Campaigns · Content · Email · Social · Marketing Operations · Team Mentorship</div>
+      </div>
+      <div class="hero-visual load-in d4">
+        <svg viewBox="0 0 400 400" fill="none">
+          <line class="node-line" x1="200" y1="200" x2="90" y2="90"/>
+          <line class="node-line" x1="200" y1="200" x2="320" y2="80"/>
+          <line class="node-line" x1="200" y1="200" x2="340" y2="230"/>
+          <line class="node-line" x1="200" y1="200" x2="270" y2="330"/>
+          <line class="node-line" x1="200" y1="200" x2="100" y2="310"/>
+          <line class="node-line" x1="200" y1="200" x2="60" y2="200"/>
+          <circle cx="200" cy="200" r="34" fill="none" stroke="var(--accent)" stroke-width="1.4"/>
+          <circle class="node-pulse" cx="200" cy="200" r="6" fill="var(--accent)"/>
+          <text x="200" y="205" text-anchor="middle" class="node-label" fill="var(--text)" font-size="10">Py</text>
+
+          <circle class="node-dot node-pulse" cx="90" cy="90" r="5"/>
+          <text x="90" y="76" text-anchor="middle" class="node-label">Campaign</text>
+
+          <circle class="node-dot node-pulse" cx="320" cy="80" r="5" style="animation-delay:.4s"/>
+          <text x="320" y="66" text-anchor="middle" class="node-label">Content</text>
+
+          <circle class="node-dot node-pulse" cx="340" cy="230" r="5" style="animation-delay:.8s"/>
+          <text x="340" y="250" text-anchor="middle" class="node-label">Email</text>
+
+          <circle class="node-dot node-pulse" cx="270" cy="330" r="5" style="animation-delay:1.2s"/>
+          <text x="270" y="352" text-anchor="middle" class="node-label">Social</text>
+
+          <circle class="node-dot node-pulse" cx="100" cy="310" r="5" style="animation-delay:1.6s"/>
+          <text x="100" y="332" text-anchor="middle" class="node-label">Analytics</text>
+
+          <circle class="node-dot node-pulse" cx="60" cy="200" r="5" style="animation-delay:2s"/>
+          <text x="60" y="186" text-anchor="middle" class="node-label">Growth</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="metrics">
+    <div class="wrap metrics-grid">
+      <div class="metric"><div class="num">[XX+]</div><div class="label">Campaigns managed</div></div>
+      <div class="metric"><div class="num">[XX%]</div><div class="label">Avg. engagement growth</div></div>
+      <div class="metric"><div class="num">[XX+]</div><div class="label">Content assets created</div></div>
+      <div class="metric"><div class="num">[XX+]</div><div class="label">Email campaigns</div></div>
+      <div class="metric"><div class="num">[X+]</div><div class="label">Years in marketing</div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:24px;">
+          <h2>Marketing that connects strategy with execution</h2>
+        </div>
+        <p>I work at the intersection of strategy, creativity, and execution. My role spans campaign planning, content development, email marketing, social media management, performance tracking, and team collaboration.</p>
+        <p>I enjoy taking a marketing objective, breaking it into actionable initiatives, building the right content and communication strategy, executing across channels, and learning from the results.</p>
+        <p>As a senior marketing professional, I also work closely with junior team members — helping them improve their thinking, execution quality, communication, and understanding of marketing fundamentals.</p>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;color:var(--text-dim);font-weight:500;margin-bottom:8px;">How I work</h3>
+        <div class="steps">
+          <div class="step"><div class="idx">01</div><div><h4>Understand</h4><p>Understand the audience, business objective, and market context.</p></div></div>
+          <div class="step"><div class="idx">02</div><div><h4>Strategize</h4><p>Build the campaign, content, channel, and communication plan.</p></div></div>
+          <div class="step"><div class="idx">03</div><div><h4>Execute</h4><p>Coordinate content, email, social, campaigns, and stakeholders.</p></div></div>
+          <div class="step"><div class="idx">04</div><div><h4>Measure &amp; improve</h4><p>Review performance, identify insights, and optimize future activity.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section alt" id="expertise">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>What I do</h2>
+        <p>Six interconnected parts of one marketing skill set — planned together, not run in isolation.</p>
+      </div>
+      <div class="card-grid">
+        <div class="exp-card">
+          <div class="exp-icon">◎</div>
+          <h3>Campaign management</h3>
+          <p class="desc">Planning and executing integrated marketing campaigns from brief to launch, monitoring, and reporting.</p>
+          <ul><li>Campaign planning</li><li>Audience segmentation</li><li>Channel coordination</li><li>Performance tracking</li></ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">✎</div>
+          <h3>Content marketing</h3>
+          <p class="desc">Content strategies and marketing assets that educate audiences and support business goals.</p>
+          <ul><li>Content strategy</li><li>Thought leadership</li><li>Copywriting</li><li>Content calendars</li></ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">✉</div>
+          <h3>Email marketing</h3>
+          <p class="desc">Targeted email communication supporting engagement, nurturing, promotions, and retention.</p>
+          <ul><li>Email journeys</li><li>Segmentation</li><li>Subject-line testing</li><li>Performance analysis</li></ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">◈</div>
+          <h3>Social media management</h3>
+          <p class="desc">Managing channels through structured planning, publishing, engagement, and analysis.</p>
+          <ul><li>Social strategy</li><li>Content calendars</li><li>Community engagement</li><li>Amplification</li></ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">◇</div>
+          <h3>Marketing strategy</h3>
+          <p class="desc">Connecting business objectives with audience insight, channel strategy, and measurable activity.</p>
+          <ul><li>Positioning</li><li>Messaging</li><li>Channel planning</li><li>Go-to-market support</li></ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">↥</div>
+          <h3>Team mentoring &amp; collaboration</h3>
+          <p class="desc">Supporting junior marketers through practical knowledge, review, and cross-functional work.</p>
+          <ul><li>Guidance</li><li>Content reviews</li><li>Feedback</li><li>Knowledge sharing</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Tools &amp; platforms</h2>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-cat"><h4>Marketing automation</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Email marketing</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Social media</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Analytics</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Content</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Design</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>Project management</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+        <div class="tool-cat"><h4>CRM</h4><div class="tool-badges"><span>[Tool]</span><span>[Tool]</span></div></div>
+      </div>
+      <p class="tools-note">Tools change. Marketing fundamentals don't.</p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section alt" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Selected work</h2>
+        <p>A sample of campaign case studies — replace with real names, channels, and results.</p>
+      </div>
+      <div class="work-list">
+        <div class="work-card reveal">
+          <div>
+            <div class="work-meta">Project 01</div>
+            <h3>Integrated campaign — [Campaign name]</h3>
+            <p style="color:var(--text-muted);font-size:.92rem;">[Company / brand]</p>
+          </div>
+          <div>
+            <div class="work-detail">
+              <div><h5>Objective</h5><p>[What was the campaign trying to achieve?]</p></div>
+              <div><h5>My role</h5><p>Campaign strategy + content + email + social coordination</p></div>
+              <div><h5>Channels</h5><p>Email · Social · Content · Paid/Organic · Website</p></div>
+              <div><h5>Outcome</h5><p>[XX% increase / XX leads / XX conversions]</p></div>
+            </div>
+            <a href="#" class="work-link">View case study →</a>
+          </div>
+        </div>
+        <div class="work-card reveal">
+          <div>
+            <div class="work-meta">Project 02</div>
+            <h3>Content-led growth — [Campaign name]</h3>
+            <p style="color:var(--text-muted);font-size:.92rem;">[Company / brand]</p>
+          </div>
+          <div>
+            <div class="work-detail">
+              <div><h5>Objective</h5><p>[What problem was this solving?]</p></div>
+              <div><h5>My role</h5><p>Content strategy + editorial calendar + distribution</p></div>
+              <div><h5>Channels</h5><p>Blog · LinkedIn · Newsletter · Website</p></div>
+              <div><h5>Outcome</h5><p>[XX% traffic growth / XX leads]</p></div>
+            </div>
+            <a href="#" class="work-link">View case study →</a>
+          </div>
+        </div>
+        <div class="work-card reveal">
+          <div>
+            <div class="work-meta">Project 03</div>
+            <h3>Lifecycle email program — [Campaign name]</h3>
+            <p style="color:var(--text-muted);font-size:.92rem;">[Company / brand]</p>
+          </div>
+          <div>
+            <div class="work-detail">
+              <div><h5>Objective</h5><p>[What was the retention/conversion goal?]</p></div>
+              <div><h5>My role</h5><p>Email strategy + journey design + copy + testing</p></div>
+              <div><h5>Channels</h5><p>Email · Landing pages</p></div>
+              <div><h5>Outcome</h5><p>[XX% open rate / XX% CTR uplift]</p></div>
+            </div>
+            <a href="#" class="work-link">View case study →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>From brief to impact</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="tstep"><div class="dot"></div><h4>01 Brief</h4><p>Understand business objectives and requirements.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>02 Research</h4><p>Understand audience, market, and messaging opportunities.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>03 Strategy</h4><p>Develop positioning, messaging, channels, and plan.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>04 Build</h4><p>Create content, email, social, and landing pages.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>05 Launch</h4><p>Coordinate stakeholders and execute across channels.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>06 Measure</h4><p>Track KPIs and campaign performance.</p></div>
+        <div class="tstep"><div class="dot"></div><h4>07 Optimize</h4><p>Identify opportunities and improve future work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section alt" id="leadership">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Leading through knowledge sharing</h2>
+        <p>Senior marketing isn't only about delivering your own work. It's also about helping the team deliver better work.</p>
+      </div>
+      <div class="lead-grid">
+        <div class="lead-card"><h4>Guide</h4><p>Helping junior marketers understand objectives, priorities, and execution standards.</p></div>
+        <div class="lead-card"><h4>Review</h4><p>Providing feedback on content, campaigns, communication, and marketing assets.</p></div>
+        <div class="lead-card"><h4>Enable</h4><p>Sharing practical knowledge, frameworks, and processes that help the team work more effectively.</p></div>
+      </div>
+      <div class="philosophy-line">"Give people context, not just instructions."<span>Mentoring philosophy</span></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Experience</h2>
+      </div>
+      <div class="exp-item reveal">
+        <div class="dates">[Start] — [End]</div>
+        <div>
+          <h3>[Job title]</h3>
+          <div class="company">[Company name]</div>
+          <ul>
+            <li>Campaign management</li><li>Content marketing</li>
+            <li>Email marketing</li><li>Social media</li>
+            <li>Marketing strategy &amp; reporting</li><li>Junior team mentoring</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="dates">[Start] — [End]</div>
+        <div>
+          <h3>[Job title]</h3>
+          <div class="company">[Company name]</div>
+          <ul>
+            <li>Campaign planning &amp; execution</li><li>Content strategy</li>
+            <li>Email campaigns</li><li>Cross-functional collaboration</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#" class="cta-btn">Download resume</a>
+        <a href="#" class="cta-ghost">View LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How I think about marketing</h2>
+      </div>
+      <div class="quote-grid reveal">
+        <div class="quote">Good marketing starts with understanding the audience.</div>
+        <div class="quote">Every campaign needs a clear objective.</div>
+        <div class="quote">Execution without measurement is only half the job.</div>
+        <div class="quote">Senior marketers should make the team around them better.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap reveal">
+      <h2>Have a marketing challenge in mind?</h2>
+      <p>Whether you're looking for a marketing professional, discussing a campaign, exploring a collaboration, or simply want to connect — I'd love to hear from you.</p>
+      <div class="contact-actions">
+        <a href="mailto:you@example.com" class="cta-btn">Email me</a>
+        <a href="#" class="cta-ghost">LinkedIn</a>
+        <a href="#" class="cta-ghost">Download resume</a>
+      </div>
+      <div class="contact-details">
+        <div><h5>Email</h5><p>[your email]</p></div>
+        <div><h5>LinkedIn</h5><p>[your linkedin]</p></div>
+        <div><h5>Location</h5><p>[City, Country]</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo"><span class="logo-mark">P</span>Py</div>
+      <div class="footer-tag">Campaigns · Content · Email · Social · Strategy · Leadership</div>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="wrap copyright">© <span id="year"></span> Py. All rights reserved.</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const hbtn = document.getElementById('hamburgerBtn');
+  const mmenu = document.getElementById('mobileMenu');
+  hbtn.addEventListener('click', () => {
+    const open = mmenu.classList.toggle('open');
+    hbtn.setAttribute('aria-expanded', open);
+  });
+  mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mmenu.classList.remove('open');
+    hbtn.setAttribute('aria-expanded','false');
+  }));
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
